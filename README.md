@@ -71,5 +71,4 @@
 
 +(CAKeyframeAnimation*)getCAKeyframeAnimationWithKeyPaths:(NSArray*)keyPaths keyTimes:(NSArray*)keyTimes calculationMode:(NSString*)calculationMode duration:(double)duration addition:(void(^)(CAKeyframeAnimation *keyAnimate))block;
 
- ![img]https://github.com/PeipeiQ/EasyAnimation/blob/master/luzhi.gif
-
+![image]https://github.com/PeipeiQ/EasyAnimation/blob/master/luzhi.gif)  
