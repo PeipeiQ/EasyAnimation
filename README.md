@@ -7,15 +7,19 @@
 将你要使用动画的view执行对应的方法即可。（所有的方法默认执行动画后不返回，如果要返回则在block中设置即可）
 
 //平移到某一点，其中tx和ty表示view的中心点将要移动到的位置
+
 -(void)setPositionAnimationWithtX:(CGFloat)tX andtY:(CGFloat)tY duration:(double)duration additions:(void(^)(CABasicAnimation *animate))block;
 
 //缩放，长宽放大缩小n倍
+
 -(void)setTransformMakeScaleAnimationWithWidthRatio:(CGFloat)W heightRatio:(CGFloat)H duration:(double)duration additions:(void(^)(CABasicAnimation *animate))block;
 
 //绕轴旋转某个角度，选择绕某一轴将其置为1，其余为0，并设置旋转角度（0～2M_PI）
+
 -(void)setTransform3DMakeRotationAnimationWithAngle:(CGFloat)angle isX:(CGFloat)X isY:(CGFloat)Y isZ:(CGFloat)Z duration:(double)duration additions:(void(^)(CABasicAnimation *animate))block;
 
 //透明度变化，设置值为0.0～1.0
+
 -(void)setOpacityAnimationWithOpacity:(float)opacity duration:(double)duration additions:(void(^)(CABasicAnimation *animate))block;
 
 //设置关键帧动画，需要定义一个CGPoint的数组来规划你要走的路线，keytiems可以设置每段位移的位移时间间隔长短比例。
@@ -35,9 +39,11 @@
 -(void)setKeyAnimationWithKeyPath:(NSArray*)keyPaths keyTimes:(NSArray *)keyTimes duration:(double)duration calculationMode:(NSString*)calculationMode additions:(void(^)(CAKeyframeAnimation *keyAnimate))block;
 
 //设置动画组，需要传入你要组合的动画并设置其属性，详细见一下获取动画实例的方法。
+
 -(void)setSerialAnimateWithAnimateGroup:(NSArray<CAAnimation*> *)aniArr duration:(double)duration additions:(void(^)(CAAnimationGroup *animaGroup))block;
 
 //设置重复动画，需要传入你要组合的动画并设置其属性，设置每次重复出现的时间间隔和重复次数。
+
 -(void)setRepeatAnimationWithAnimations:(NSArray<CAAnimation*>*)animations instanceCount:(int)instanceCount instanceDelay:(float)instanceDelay repeatCount:(int)repeatCount;
 
 /////获取动画实例的方法
